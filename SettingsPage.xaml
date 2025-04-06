@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SHROH.SettingsPage"
+             Title="SettingsPage">
+    <ScrollView BackgroundColor="#FAFAF9">
+        <VerticalStackLayout  Spacing="25" HorizontalOptions="Center">
+            <Label
+            Text="SHROH"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1" />
+            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
+                <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto">
+                    <Button Text="Dashboard" Grid.Column="0" FontSize="12"/>
+                    <Button Text="Transactions" Grid.Column="1" FontSize="12"/>
+                    <Button Text="Budgets" Grid.Column="2" FontSize="12"/>
+                    <Button Text="Settings" Grid.Column="4" FontSize="12"/>
+                </Grid>
+            </Border>
+
+            <Label Text="Settings"
+               FontSize="28"
+               FontAttributes="Bold"
+               />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Text="Currency" Grid.Column="0" />
+                <HorizontalStackLayout Spacing="10" Grid.Column="2">
+                    <RadioButton Content="USD" GroupName="CurrencyGroup" />
+                    <RadioButton Content="GBP" GroupName="CurrencyGroup" />
+                    <RadioButton Content="EUR" GroupName="CurrencyGroup" />
+                </HorizontalStackLayout>
+
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label  Text="Theme" Grid.Column="0" />
+                <HorizontalStackLayout Spacing="10" Grid.Column="2">
+                    <RadioButton Content="Light"/>
+                    <RadioButton Content="Dark"/>
+                </HorizontalStackLayout>
+
+
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
