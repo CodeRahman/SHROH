@@ -2,13 +2,15 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
+        private async void OnDashboardClicked(object sender, EventArgs e)
+        {
+           await Navigation.PushAsync(new DashboardPage());
+        }
         private async void OnTransactionsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TransactionsPage());

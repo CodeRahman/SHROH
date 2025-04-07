@@ -14,10 +14,10 @@
             SemanticProperties.HeadingLevel="Level1" />
             <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
                 <Grid ColumnDefinitions="Auto,Auto,Auto,Auto,Auto">
-                    <Button Text="Dashboard" Grid.Column="0" FontSize="12"/>
-                    <Button Text="Transactions" Grid.Column="1" FontSize="12" Clicked="OnTransactionsClicked"/>
-                    <Button Text="Budgets" Grid.Column="2" FontSize="12" Clicked="OnBudgetsClicked"/>
-                    <Button Text="Settings" Grid.Column="4" FontSize="12" Clicked="OnSettingsClicked"/>
+                    <Button Text="Dashboard" Grid.Column="0" FontSize="12" Clicked="OnDashboardClicked"></Button>
+                    <Button Text="Transactions" Grid.Column="1" FontSize="12" Clicked="OnTransactionsClicked"></Button>
+                    <Button Text="Budgets" Grid.Column="2" FontSize="12" Clicked="OnBudgetsClicked"></Button>
+                    <Button Text="Settings" Grid.Column="4" FontSize="12" Clicked="OnSettingsClicked"></Button>
                 </Grid>
             </Border>
 
