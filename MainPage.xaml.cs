@@ -9,7 +9,7 @@
 
         private async void OnDashboardClicked(object sender, EventArgs e)
         {
-           await Navigation.PushAsync(new DashboardPage());
+            await Navigation.PushAsync(new DashboardPage());
         }
         private async void OnTransactionsClicked(object sender, EventArgs e)
         {
@@ -24,11 +24,6 @@
         private async void OnBudgetsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BudgetsPage());
-        }
-
-        private async void OnReportsClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ReportsPage());
         }
 
     }

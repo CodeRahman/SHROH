@@ -1,9 +1,10 @@
-namespace SHROH;
-
-public partial class TransactionsPage : ContentPage
+namespace SHROH
 {
-	public TransactionsPage()
-	{
-		InitializeComponent();
-	}
+    public partial class TransactionsPage : ContentPage
+    {
+        public TransactionsPage()
+        {
+            InitializeComponent();
+        }
+    }
 }
