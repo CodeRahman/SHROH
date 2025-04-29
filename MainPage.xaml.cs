@@ -22,12 +22,9 @@
         private async void OnBudgetsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BudgetsPage());
-        }
 
-        private async void OnReportsClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ReportsPage());
         }
+ 
 
     }
 
