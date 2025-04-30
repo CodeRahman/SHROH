@@ -17,7 +17,7 @@
                     <Button Text="Dashboard" Grid.Column="0" FontSize="12" Clicked="OnDashboardClicked"></Button>
                     <Button Text="Transactions" Grid.Column="1" FontSize="12" Clicked="OnTransactionsClicked"></Button>
                     <Button Text="Budgets" Grid.Column="2" FontSize="12" Clicked="OnBudgetsClicked"></Button>
-                    <Button Text="Settings" Grid.Column="4" FontSize="12" Clicked="OnSettingsClicked"></Button>
+                        <Button Text="Settings" Grid.Column="4" FontSize="12" Clicked="OnSettingsClicked"></Button>
                 </Grid>
             </Border>
 

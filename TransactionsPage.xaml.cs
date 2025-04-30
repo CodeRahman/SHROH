@@ -4,7 +4,6 @@ namespace SHROH
     {
         public TransactionsPage()
         {
-            InitializeComponent();
         }
     }
 }
