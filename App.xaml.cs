@@ -3,6 +3,7 @@
     public partial class App : Application
     {
         public App()
+
         {
             InitializeComponent();
             InitializeDatabase();
@@ -12,6 +13,8 @@
         {
             await Services.DatabaseService.Instance.Init();
         }
+        
+       
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
