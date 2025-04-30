@@ -19,6 +19,8 @@
         private async void OnBudgetsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BudgetsPage());
+
+
         }
 
         private async void OnDashboardClicked(object sender, EventArgs e)

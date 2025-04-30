@@ -1,8 +1,92 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SHROH"
              x:Class="SHROH.TransactionsPage"
              Title="TransactionsPage">
-    
+   
+
+
+    <ScrollView BackgroundColor="#FAFAF9">
+        <VerticalStackLayout  Spacing="25" HorizontalOptions="Center">
+            <Label
+        Text="SHROH"
+        Style="{StaticResource Headline}"
+        SemanticProperties.HeadingLevel="Level1" />
+            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
+                <local:NavigationBar />
+            </Border>
+            <Label Text="Transactions"
+            FontSize="28"
+            FontAttributes="Bold"
+            />
+
+
+            <Grid ColumnDefinitions="100,*,100, *, 100">
+                <Button Text="All" Grid.Column="0" FontSize="12" BackgroundColor="#8b5cf6"/>
+                <Button Text="Income" Grid.Column="2" FontSize="12" BackgroundColor ="#D1FAE5" TextColor="#065F46"/>
+                <Button Text="Expenses" Grid.Column="4" FontSize="12" BackgroundColor="#FECACA" TextColor="#7F1D1D"/>
+
+            </Grid>
+
+            
+            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#ffffff" HorizontalOptions="Fill" Padding="15">
+      
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto ,Auto,Auto,Auto, Auto" ColumnDefinitions="Auto, Auto, Auto,Auto" ColumnSpacing="15" RowSpacing="5" BackgroundColor="#FFFFFF">
+
+                    <Label Text="Date" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
+                    <Label Text="Category" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"/>
+                    <Label Text="Description" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"/>
+                    <Label Text="Amount" Grid.Row="0" Grid.Column="3" FontAttributes="Bold"/>
+
+
+                    <Label Text="5/12" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="Groceries" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="Supermarket" Grid.Row="1" Grid.Column="2"/>
+                    <Label Text="-$80.00" Grid.Row="1" Grid.Column="3"/>
+
+                    <Label Text="5/10" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="Dining Out" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="Pizza Restaurant" Grid.Row="2" Grid.Column="2"/>
+                    <Label Text="-$37.56" Grid.Row="2" Grid.Column="3"/>
+
+                    <Label Text="5/08" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="Utilities" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="Electric Bill" Grid.Row="3" Grid.Column="2"/>
+                    <Label Text="-$120.00" Grid.Row="3" Grid.Column="3"/>
+
+                    <Label Text="5/05" Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="Salary" Grid.Row="4" Grid.Column="1"/>
+                    <Label Text="April Paycheck" Grid.Row="4" Grid.Column="2"/>
+                    <Label Text="+2,500.00" Grid.Row="4" Grid.Column="3"/>
+
+
+                    <Label Text="5/12" Grid.Row="5" Grid.Column="0"/>
+                    <Label Text="Groceries" Grid.Row="5" Grid.Column="1"/>
+                    <Label Text="Supermarket" Grid.Row="5" Grid.Column="2"/>
+                    <Label Text="-$80.00" Grid.Row="5" Grid.Column="3"/>
+
+                    <Label Text="5/10" Grid.Row="6" Grid.Column="0"/>
+                    <Label Text="Dining Out" Grid.Row="6" Grid.Column="1"/>
+                    <Label Text="Pizza Restaurant" Grid.Row="6" Grid.Column="2"/>
+                    <Label Text="-$37.56" Grid.Row="6" Grid.Column="3"/>
+
+                    <Label Text="5/08" Grid.Row="7" Grid.Column="0"/>
+                    <Label Text="Utilities" Grid.Row="7" Grid.Column="1"/>
+                    <Label Text="Electric Bill" Grid.Row="7" Grid.Column="2"/>
+                    <Label Text="-$120.00" Grid.Row="7" Grid.Column="3"/>
+
+                    <Label Text="5/05" Grid.Row="8" Grid.Column="0"/>
+                    <Label Text="Salary" Grid.Row="8" Grid.Column="1"/>
+                    <Label Text="April Paycheck" Grid.Row="8" Grid.Column="2"/>
+                    <Label Text="+2,500.00" Grid.Row="8" Grid.Column="3"/>
+
+                </Grid>
+            </Border>
+
+            <Label Text="Page Bottom"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
 
