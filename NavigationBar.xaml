@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SHROH.NavigationBar">
+    <HorizontalStackLayout Padding="10" Spacing="15" HorizontalOptions="Center">
+
+        <Button Text="Dashboard" Clicked="OnDashboardClicked" />
+                <Button Text="Transactions" Clicked="OnTransactionsClicked" />
+                <Button Text="Budgets" Clicked="OnBudgetsClicked" />
+            <Button Text="Settings" Clicked="OnSettingsClicked" />
+    </HorizontalStackLayout>
+       
+</ContentView>

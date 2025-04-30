@@ -24,6 +24,8 @@
         private async void OnBudgetsClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BudgetsPage());
+
+
         }
 
     }
