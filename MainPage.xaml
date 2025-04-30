@@ -14,6 +14,7 @@
             Style="{StaticResource Headline}"
             SemanticProperties.HeadingLevel="Level1" />
             <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
+
                 <local:NavigationBar />
             </Border>
 

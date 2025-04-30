@@ -19,7 +19,7 @@
             <Label Text="Transactions"
             FontSize="28"
             FontAttributes="Bold"
-            />   
+            />
 
 
             <Grid ColumnDefinitions="100,*,100, *, 100">
@@ -31,7 +31,7 @@
 
             
             <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#ffffff" HorizontalOptions="Fill" Padding="15">
-                
+      
                 <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto ,Auto,Auto,Auto, Auto" ColumnDefinitions="Auto, Auto, Auto,Auto" ColumnSpacing="15" RowSpacing="5" BackgroundColor="#FFFFFF">
 
                     <Label Text="Date" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
@@ -60,6 +60,7 @@
                     <Label Text="April Paycheck" Grid.Row="4" Grid.Column="2"/>
                     <Label Text="+2,500.00" Grid.Row="4" Grid.Column="3"/>
 
+
                     <Label Text="5/12" Grid.Row="5" Grid.Column="0"/>
                     <Label Text="Groceries" Grid.Row="5" Grid.Column="1"/>
                     <Label Text="Supermarket" Grid.Row="5" Grid.Column="2"/>
@@ -79,6 +80,7 @@
                     <Label Text="Salary" Grid.Row="8" Grid.Column="1"/>
                     <Label Text="April Paycheck" Grid.Row="8" Grid.Column="2"/>
                     <Label Text="+2,500.00" Grid.Row="8" Grid.Column="3"/>
+
                 </Grid>
             </Border>
 
@@ -87,3 +89,4 @@
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+
