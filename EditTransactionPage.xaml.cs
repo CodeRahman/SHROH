@@ -7,7 +7,7 @@ namespace SHROH
     {
         private TransactionModel _tx;
 
-        public EditTransactionPage(TransactionModel tx)
+        public EditTransactionPage(TransactionModel tx) // v
         {
             InitializeComponent();
             _tx = tx;
