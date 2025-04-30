@@ -5,6 +5,12 @@
         public App()
         {
             InitializeComponent();
+            InitializeDatabase();
+        }
+
+        private async void InitializeDatabase()
+        {
+            await Services.DatabaseService.Instance.Init();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
