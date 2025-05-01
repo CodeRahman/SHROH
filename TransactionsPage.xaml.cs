@@ -1,6 +1,7 @@
 ﻿using SHROH;
 using SHROH.Services;
 using SHROH.Models;
+using SHROH.Helpers;
 
 namespace SHROH
 {
@@ -26,6 +27,7 @@ namespace SHROH
             await DatabaseService.Instance.Init();
 
             _allTransactions = await DatabaseService.Instance.GetTransactionsAsync();
+            var (currency, rate) = await SettingsHelper.GetCurrencyInfoAsync();
 
             var filtered = _filter switch
             {
@@ -35,15 +37,14 @@ namespace SHROH
             };
 
             var transactions = _showAll
-    ? filtered.OrderByDescending(t => t.Date).ToList()
-    : filtered.OrderByDescending(t => t.Date).Take(10).ToList();
+                ? filtered.OrderByDescending(t => t.Date).ToList()
+                : filtered.OrderByDescending(t => t.Date).Take(10).ToList();
 
             MoreButton.IsVisible = !_showAll && filtered.Count > 10;
 
             TransactionGrid.Children.Clear();
             TransactionGrid.RowDefinitions.Clear();
 
-            // Header row
             TransactionGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
             void AddCell(View view, int col, int row)
@@ -66,7 +67,6 @@ namespace SHROH
                 AddCell(new Label { Text = tx.Date.ToString("MM/dd") }, 0, row);
                 AddCell(new Label { Text = tx.Category }, 2, row);
 
-                // Clickable description
                 var descLabel = new Label
                 {
                     Text = tx.Description,
@@ -86,13 +86,14 @@ namespace SHROH
 
                 AddCell(new Label
                 {
-                    Text = tx.IsIncome ? $"+{tx.Amount:F2}" : $"-{tx.Amount:F2}",
+                    Text = SettingsHelper.FormatAmount(tx.Amount, rate, currency),
                     TextColor = tx.IsIncome ? Colors.Green : Colors.Red
                 }, 3, row);
 
                 row++;
             }
         }
+
 
         private void OnMoreClicked(object sender, EventArgs e)
         {

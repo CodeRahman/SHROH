@@ -4,47 +4,45 @@
              xmlns:local="clr-namespace:SHROH"
              x:Class="SHROH.MainPage">
 
-   
-
-
     <ScrollView BackgroundColor="#FAFAF9">
-        <VerticalStackLayout  Spacing="25" HorizontalOptions="Center">
-            <Label
-            Text="SHROH"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1" />
-            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
+        <VerticalStackLayout Spacing="25" HorizontalOptions="Center">
 
+            <Label Text="SHROH"
+                   Style="{StaticResource Headline}"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Border StrokeShape="RoundRectangle 7"
+                    Stroke="Transparent"
+                    BackgroundColor="#8b5cf6"
+                    Padding="0">
                 <local:NavigationBar />
             </Border>
 
             <Label Text="Dashboard"
-            FontSize="28"
-            FontAttributes="Bold"
-            />
+                   FontSize="28"
+                   FontAttributes="Bold" />
 
-
-            <Label  Text="BALANCE SUMMARY" Grid.Column="0" />
-            
+            <Label Text="BALANCE SUMMARY" />
 
             <Grid HeightRequest="50">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.45*" />
-                    <ColumnDefinition Width="0.1*"/>
-                    <ColumnDefinition Width="0.45*"/>
+                    <ColumnDefinition Width="0.1*" />
+                    <ColumnDefinition Width="0.45*" />
                 </Grid.ColumnDefinitions>
 
-                <VerticalStackLayout BackgroundColor="#D1FAE5" Grid.Column="0" Padding="5, 5, 5, 5">
-                    <Label  Text="INCOME"   HorizontalTextAlignment="Center" TextColor="#065F46"/>
-                    <Label  Text="$5,000.00"   HorizontalTextAlignment="Center" TextColor="#059669"/>
-                </VerticalStackLayout>
-                <VerticalStackLayout BackgroundColor="#FECACA" Grid.Column="2" Padding="5, 5, 5, 5">
-                    <Label  Text="EXPENSES"  HorizontalTextAlignment="Center" TextColor="#7F1D1D"/>
-                    <Label  Text="$3,500.00"  HorizontalTextAlignment="Center" TextColor="#B91C1C"/>
+                <VerticalStackLayout BackgroundColor="#D1FAE5" Grid.Column="0" Padding="5">
+                    <Label Text="INCOME" HorizontalTextAlignment="Center" TextColor="#065F46"/>
+                    <Label x:Name="IncomeAmountLabel" Text="$0.00" HorizontalTextAlignment="Center" TextColor="#059669"/>
                 </VerticalStackLayout>
 
+                <VerticalStackLayout BackgroundColor="#FECACA" Grid.Column="2" Padding="5">
+                    <Label Text="EXPENSES" HorizontalTextAlignment="Center" TextColor="#7F1D1D"/>
+                    <Label x:Name="ExpensesAmountLabel" Text="$0.00" HorizontalTextAlignment="Center" TextColor="#B91C1C"/>
+                </VerticalStackLayout>
             </Grid>
-            <Label Text="Current Balance: $1,500.00"/>
+
+            <Label x:Name="BalanceLabel" Text="Current Balance: $0.00"/>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -53,48 +51,26 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-
-                <Button Text="Add Transaction" Grid.Column="0" BackgroundColor="#8b5cf6"/>
-                <Button Text="View All Transactions" Grid.Column="2" BackgroundColor="#8B5CF6"/>
-
+                <Button Text="Add Transaction" Grid.Column="0" BackgroundColor="#8b5cf6"
+                        Clicked="OnAddTransactionClicked"/>
+                <Button Text="View All Transactions" Grid.Column="2" BackgroundColor="#8B5CF6"
+                        Clicked="OnViewAllClicked"/>
             </Grid>
 
-            <Label Text="RECENT TRANSACTIONS" Grid.Column="0" />
-                
+            <Label Text="RECENT TRANSACTIONS" />
 
-
-            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#ffffff" HorizontalOptions="Fill" Padding="15">
-                <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto" ColumnDefinitions="Auto, Auto, Auto,Auto" ColumnSpacing="15" RowSpacing="5" BackgroundColor="#FFFFFF">
-
-                    <Label Text="Date" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
-                    <Label Text="Category" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"/>
-                    <Label Text="Description" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"/>
-                    <Label Text="Amount" Grid.Row="0" Grid.Column="3" FontAttributes="Bold"/>
-
-
-                    <Label Text="5/12" Grid.Row="1" Grid.Column="0"/>
-                    <Label Text="Groceries" Grid.Row="1" Grid.Column="1"/>
-                    <Label Text="Supermarket" Grid.Row="1" Grid.Column="2"/>
-                    <Label Text="-$80.00" Grid.Row="1" Grid.Column="3"/>
-
-                    <Label Text="5/10" Grid.Row="2" Grid.Column="0"/>
-                    <Label Text="Dining Out" Grid.Row="2" Grid.Column="1"/>
-                    <Label Text="Pizza Restaurant" Grid.Row="2" Grid.Column="2"/>
-                    <Label Text="-$37.56" Grid.Row="2" Grid.Column="3"/>
-
-                    <Label Text="5/08" Grid.Row="3" Grid.Column="0"/>
-                    <Label Text="Utilities" Grid.Row="3" Grid.Column="1"/>
-                    <Label Text="Electric Bill" Grid.Row="3" Grid.Column="2"/>
-                    <Label Text="-$120.00" Grid.Row="3" Grid.Column="3"/>
-
-                    <Label Text="5/05" Grid.Row="4" Grid.Column="0"/>
-                    <Label Text="SalarY" Grid.Row="4" Grid.Column="1"/>
-                    <Label Text="April Paycheck" Grid.Row="4" Grid.Column="2"/>
-                    <Label Text="+2,500.00" Grid.Row="4" Grid.Column="3"/>
-                </Grid>
+            <Border StrokeShape="RoundRectangle 7"
+                    Stroke="Transparent"
+                    BackgroundColor="#ffffff"
+                    HorizontalOptions="Fill"
+                    Padding="15">
+                <Grid x:Name="DashboardTransactionGrid"
+                      ColumnDefinitions="Auto, Auto, *, Auto"
+                      RowSpacing="5"
+                      ColumnSpacing="15" />
             </Border>
 
-            <Label Text="Page Bottom"/>
+            <Label Text="Page Bottom" />
 
         </VerticalStackLayout>
     </ScrollView>

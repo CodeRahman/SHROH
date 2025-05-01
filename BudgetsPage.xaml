@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SHROH"
@@ -6,88 +5,33 @@
              Title="BudgetsPage">
 
     <ScrollView BackgroundColor="#FAFAF9">
-        <VerticalStackLayout  Spacing="25" HorizontalOptions="Center">
-            <Label
-            Text="SHROH"
-            Style="{StaticResource Headline}"
-            SemanticProperties.HeadingLevel="Level1" />
-            <Border StrokeShape="RoundRectangle 7" Stroke="Transparent" BackgroundColor="#8b5cf6" Padding="0">
+        <VerticalStackLayout Spacing="25" HorizontalOptions="Center">
+
+            <Label Text="SHROH"
+                   Style="{StaticResource Headline}"
+                   SemanticProperties.HeadingLevel="Level1" />
+
+            <Border StrokeShape="RoundRectangle 7"
+                    Stroke="Transparent"
+                    BackgroundColor="#8b5cf6"
+                    Padding="0">
                 <local:NavigationBar />
             </Border>
 
             <Label Text="April Budget" FontSize="28" FontAttributes="Bold" />
 
-            <Frame BackgroundColor="#e0e7ff"  Padding="15">
-                <VerticalStackLayout>
-                    <Label Text="Total Budget: $5,000"
-                       FontSize="18"
-                       FontAttributes="Bold" />
-                    <Label Text="Spent: $3,125"
-                        FontSize="16" />
-                    <ProgressBar Progress="0.625"
-                     ProgressColor="#4f46e5"
-                     HeightRequest="8"
-                     Margin="0,10,0,0" />
-                </VerticalStackLayout>
-            </Frame>
-            <VerticalStackLayout Spacing="15">
-
-                <Frame BackgroundColor="#f3f4f6" CornerRadius="12" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Utilities - $650 / $650"
-                           FontSize="16"
-                           FontAttributes="Bold" />
-                        <ProgressBar Progress="1"
-                         ProgressColor="#ef4444"
-                         HeightRequest="6" />
-                    </VerticalStackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="#f3f4f6" CornerRadius="12" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Groceries - $800 / $1000"
-                           FontSize="16"
-                           FontAttributes="Bold" />
-                        <ProgressBar Progress="0.8"
-                         ProgressColor="#10b981"
-                         HeightRequest="6" />
-                    </VerticalStackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="#f3f4f6" CornerRadius="12" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Entertainment - $100 / $300"
-                   FontSize="16"
-                   FontAttributes="Bold" />
-                        <ProgressBar Progress="0.33"
-                         ProgressColor="#facc15"
-                         HeightRequest="6" />
-                    </VerticalStackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="#f3f4f6" CornerRadius="12" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Transportation - $125 / $500"
-                   FontSize="16"
-                   FontAttributes="Bold" />
-                        <ProgressBar Progress="0.25"
-                         ProgressColor="#3b82f6"
-                         HeightRequest="6" />
-                    </VerticalStackLayout>
-                </Frame>
-            </VerticalStackLayout>
+            <VerticalStackLayout x:Name="BudgetStack" Spacing="15" />
 
             <Button Text="Add/Edit Budgets"
-                BackgroundColor="#8b5cf6"
-                TextColor="White"
-                CornerRadius="10"
-                FontAttributes="Bold"
-                HeightRequest="45"
-                HorizontalOptions="Fill" />
+                    Clicked="OnAddBudgetClicked"
+                    BackgroundColor="#8b5cf6"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    HeightRequest="45"
+                    HorizontalOptions="Fill" />
 
-
-            <Label Text="Page Bottom"/>
-
+            <Label Text="Page Bottom" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

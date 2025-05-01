@@ -29,7 +29,7 @@ namespace SHROH
 
 
             await DatabaseService.Instance.SaveTransactionAsync(transaction);
-            await Shell.Current.Navigation.PopAsync(); // Go back to TransactionsPage
+            await Shell.Current.Navigation.PopAsync(); 
         }
     }
 }

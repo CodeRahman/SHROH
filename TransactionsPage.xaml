@@ -30,7 +30,7 @@
                         BackgroundColor="#8b5cf6" />
             </Grid>
 
-            <!-- Filter Buttons -->
+          
             <Grid ColumnDefinitions="100,*,100,*,100">
                 <Button Text="All" Grid.Column="0" FontSize="12" BackgroundColor="#8b5cf6"
                         Clicked="OnFilterClicked" CommandParameter="All"/>
@@ -40,7 +40,7 @@
                         Clicked="OnFilterClicked" CommandParameter="Expenses"/>
             </Grid>
 
-            <!-- Dynamic Grid Container -->
+           
             <Border StrokeShape="RoundRectangle 7"
                     Stroke="Transparent"
                     BackgroundColor="#ffffff"
@@ -52,7 +52,7 @@
                       ColumnSpacing="15" />
             </Border>
 
-            <!-- More Button -->
+            
             <Button x:Name="MoreButton"
                     Text="More Transactions"
                     Clicked="OnMoreClicked"

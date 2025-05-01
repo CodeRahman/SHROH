@@ -18,6 +18,7 @@
                         <x:String>Dining Out</x:String>
                         <x:String>Transportation</x:String>
                         <x:String>Salary</x:String>
+                        <x:String>Miscellaneous</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>

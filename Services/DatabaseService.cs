@@ -38,10 +38,34 @@ namespace SHROH.Services
 
         // Budget Methods
         public Task<List<BudgetModel>> GetBudgetsAsync() => _database.Table<BudgetModel>().ToListAsync();
-        public Task<int> SaveBudgetAsync(BudgetModel item) => _database.InsertOrReplaceAsync(item);
+        public async Task<int> SaveBudgetAsync(BudgetModel item)
+        {
+            var existing = await _database.Table<BudgetModel>()
+                                          .Where(b => b.Category == item.Category)
+                                          .FirstOrDefaultAsync();
 
-        // Settings Methods
-        public Task<List<SettingsModel>> GetSettingsAsync() => _database.Table<SettingsModel>().ToListAsync();
-        public Task<int> SaveSettingsAsync(SettingsModel item) => _database.InsertOrReplaceAsync(item);
+            if (existing != null)
+            {
+                existing.Limit = item.Limit;
+                return await _database.UpdateAsync(existing);
+            }
+            else
+            {
+                return await _database.InsertAsync(item);
+            }
+        }
+
+
+        
+        public Task<List<SettingsModel>> GetSettingsAsync()
+        {
+            return _database.Table<SettingsModel>().ToListAsync();
+        }
+
+        public Task<int> SaveSettingsAsync(SettingsModel item)
+        {
+            return _database.InsertOrReplaceAsync(item);
+        }
+
     }
 }

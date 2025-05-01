@@ -9,6 +9,5 @@ namespace SHROH.Models
 
         public string Category { get; set; }
         public double Limit { get; set; }
-        public double CurrentSpending { get; set; }
     }
 }
