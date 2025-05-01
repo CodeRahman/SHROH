@@ -4,34 +4,15 @@
 
 ---
 
-## 📱 Features
+## ✅ Final Project Submission Checklist
 
-- ✅ **Dashboard** showing income, expenses, balance, and recent transactions
-- ✅ **Transactions page** for adding, editing, and deleting financial entries
-- ✅ **Budgets page** to set category-based spending limits and track usage
-- ✅ **Settings page** to choose currency (USD, GBP, EUR) and toggle light/dark theme
-- ✅ Local **SQLite database** for saving all records
+This submission includes:
 
----
+1. ✅ All project files (`.cs`, `.xaml`, `.csproj`, `.sqlite`, and images if applicable)
+2. ✅ Full implementation of **all pages** from the original Front-End Design Document
+3. ✅ App navigation that links every page together via a central navigation bar
+4. ✅ A complete documentation package including this `README.md` and "How to Run" instructions
 
-## 🛠️ How to Run
-
-### 🔧 Requirements
-
-- **Visual Studio 2022 or newer**
-- **.NET 7 or 8 SDK**
-- **.NET MAUI workload**
-- Android emulator OR physical device
-
-### ▶️ Steps
-
-1. **Clone or open the project in Visual Studio**
-
-   Open the solution file:
-
-# 💸 SHROH – Personal Finance Tracker
-
-**SHROH** (Simple Home Records Organizer Hub) is a personal finance management app built with .NET MAUI. It helps users track income, expenses, budgets, and preferences like currency and app theme—all with a clean mobile UI.
 
 ---
 
@@ -65,13 +46,13 @@
 
 3. **Build the project**
 
-  Press `Ctrl+Shift+B` or right click the project aand click Build
+  Press `Ctrl+Shift+B` or right click the project and click Build
 
 
 4. **Run the app**
 
 - Select windows machine.
-- Press `F5` or click the ▶️ Start button.
+- click the ▶️ Start button.
 
 ---
 
