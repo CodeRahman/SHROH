@@ -3,6 +3,18 @@
 **SHROH** is a personal finance management app built with .NET MAUI. It helps users track income, expenses, budgets, with a clean mobile UI.
 
 ---
+### 🧾 Course:
+**CSC 317 – Final Project**  
+*Spring 2025 – Group 3*
+
+### 👥 Team Members & Responsibilities:
+- **Alexander Harrington** – Project Manager  
+- **Abhishek Ray** – Quality Assurance Tester  
+- **Christopher Halbert** – Back-End Developer  
+- **Abdurrahman Oyediran** – Front-End Engineer  
+
+
+---
 
 ## ✅ Final Project Submission Checklist
 
@@ -88,6 +100,25 @@ This submission includes:
 2. Add a transaction in “Utilities” for $150
 3. See the budget update and balance reflect instantly
 4. Change to “EUR” and watch all amounts update dynamically
+
+---
+
+### 🔧 Challenges We Faced
+
+- Setting up and using SQLite across multiple views
+- Creating a reusable NavigationBar with MAUI
+- Maintaining consistent XAML UI layout
+- Handling dynamic binding errors from user input
+- Implementing light and dark theme toggling
+
+---
+
+### ✅ Project Successes
+
+- Fully working backend with real-time SQLite integration
+- Seamless navigation between pages
+- Clean UI consistent with original design document
+- Successfully met all Milestone 3 requirements
 
 ---
 
